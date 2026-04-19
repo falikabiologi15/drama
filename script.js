@@ -1,8 +1,14 @@
-// Data sederhana untuk sinopsis
 const dramaData = {
-    "Love Beyond The Grave": "Drama fantasi romansa Tiongkok tentang He Simu, master hantu/roh 400 tahun, dan Duan Xu, jenderal manusia misterius.",
-    "Hidden Love": "Drama manis tentang cinta terpendam selama bertahun-tahun antara Sang Zhi dan teman kakaknya.",
-    "The Untamed": "Perjalanan heroik dua kultivator dalam mengungkap misteri gelap di dunia persilatan."
+    "Love Beyond the Grave": "Kisah cinta abadi yang melampaui kematian melalui ritual terlarang.",
+    "Hidden Love": "Cinta terpendam Sang Zhi kepada teman kakaknya, Duan Jiaxu.",
+    "The Untamed": "Perjalanan Wei Wuxian dan Lan Wangji memecahkan misteri dunia kultivasi.",
+    "Who Rules The World": "Persaingan dan cinta antara dua ahli bela diri tak terkalahkan.",
+    "Eternal Love": "Kisah cinta tiga kehidupan antara dewi rubah dan putra mahkota langit.",
+    "Lighter and Princess": "Kisah cinta programmer jenius dan gadis berkemauan keras.",
+    "Till The End of The Moon": "Perjuangan dewi untuk menghentikan kebangkitan Raja Iblis.",
+    "Story of Kunning Palace": "Kesempatan kedua seorang ratu untuk memperbaiki masa lalunya.",
+    "Amidst a Snowstorm of Love": "Pertemuan manis dua pemain biliar profesional di tengah badai salju.",
+    "Wonderland of Love": "Pertemuan jenderal pemberontak dan putri prajurit yang menyamar."
 };
 
 const modal = document.getElementById("dramaModal");
