@@ -1,60 +1,33 @@
-// 1. Database Sinopsis Drama
-const dramaData = {
-    "Love Beyond the Grave": "Kisah cinta abadi yang melampaui kematian, di mana seorang pendekar berusaha membangkitkan kekasihnya melalui ritual terlarang.",
-    "Hidden Love": "Drama manis tentang cinta terpendam Sang Zhi kepada teman kakaknya yang bernama Duan Jiaxu selama bertahun-tahun.",
-    "The Untamed": "Perjalanan heroik dua kultivator dalam mengungkap konspirasi gelap dan misteri di dunia persilatan (Jianghu).",
-    "Who Rules The World": "Kisah petualangan dua ahli bela diri hebat yang terjebak dalam politik kerajaan dan persaingan cinta.",
-    "Eternal Love": "Cinta legendaris melintasi tiga kehidupan antara dewi rubah Bai Qian dan Putra Mahkota langit Ye Hua.",
-    "Lighter and Princess": "Kisah cinta penuh perjuangan dan inspirasi antara programmer jenius Li Xun dan gadis berkemauan keras Zhu Yun.",
-    "Till The End of The Moon": "Seorang dewi kembali ke masa lalu untuk mencegah bangkitnya Raja Iblis kejam dengan mengubah takdirnya.",
-    "Story of Kunning Palace": "Seorang ratu mendapatkan kesempatan kedua untuk hidup kembali dan memperbaiki kesalahan masa lalunya yang tragis.",
-    "Amidst a Snowstorm of Love": "Pertemuan romantis antara dua atlet biliar profesional jenius di tengah badai salju di Helsinki.",
-    "Wonderland of Love": "Persaingan taktik, keberanian, dan cinta antara jenderal garis depan dan putri prajurit yang menyamar."
-};
+const dramas = [
+    { title: "Love Between Fairy and Devil", genre: "xianxia" },
+    { title: "Who Rules The World", genre: "wuxia" },
+    { title: "Hidden Love", genre: "modern" },
+    { title: "Lighter and Princess", genre: "school" },
+    { title: "Falling Into Your Smile", genre: "esport" },
+    { title: "Story of Kunning Palace", genre: "history" },
+    { title: "Arsenal Military Academy", genre: "republican" }
+];
 
-// 2. Ambil Elemen DOM
-const modal = document.getElementById("dramaModal");
-const cards = document.querySelectorAll(".card");
-const modalTitle = document.getElementById("modalTitle");
-const modalImg = document.getElementById("modalImg");
-const modalDesc = document.getElementById("modalDesc");
-const closeBtn = document.querySelector(".close-btn");
+function displayDramas(filter) {
+    const container = document.getElementById('drama-container');
+    container.innerHTML = "";
 
-// 3. Fungsi untuk Membuka Modal
-cards.forEach(card => {
-    card.addEventListener("click", () => {
-        // Ambil teks judul dari tag h3 dan hapus spasi kosong di awal/akhir
-        const title = card.querySelector("h3").innerText.trim();
-        const img = card.querySelector("img").src;
+    const filtered = filter === 'all' ? dramas : dramas.filter(d => d.genre === filter);
 
-        // Masukkan data ke dalam modal
-        modalTitle.innerText = title;
-        modalImg.src = img;
-        
-        // Cari sinopsis berdasarkan judul
-        if (dramaData[title]) {
-            modalDesc.innerText = dramaData[title];
-        } else {
-            modalDesc.innerText = "Sinopsis untuk '" + title + "' sedang dalam perjalanan dari kekaisaran.";
-        }
-
-        // Tampilkan modal dengan efek smooth
-        modal.style.display = "block";
-        // Kunci scroll body agar tidak bergeser saat modal terbuka
-        document.body.style.overflow = "hidden";
+    filtered.forEach(drama => {
+        const card = document.createElement('div');
+        card.className = 'drama-card';
+        card.innerHTML = `
+            <h3>${drama.title}</h3>
+            <p style="color: #d4af37;">${drama.genre.toUpperCase()}</p>
+        `;
+        container.appendChild(card);
     });
-});
+}
 
-// 4. Fungsi untuk Menutup Modal
-closeBtn.onclick = () => {
-    modal.style.display = "none";
-    document.body.style.overflow = "auto";
-};
+function filterGenre(genre) {
+    displayDramas(genre);
+}
 
-// Tutup modal jika user klik di luar kotak modal (area hitam)
-window.onclick = (event) => {
-    if (event.target == modal) {
-        modal.style.display = "none";
-        document.body.style.overflow = "auto";
-    }
-};
+// Jalankan saat pertama kali dibuka
+displayDramas('all');
