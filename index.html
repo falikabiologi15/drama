@@ -3,139 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal Drama China</title>
+    <title>Kumpulan Drama China</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <div class="bg-overlay"></div>
+
     <header>
-        <nav>
-            <div class="logo">华语 DRAMA</div>
-            <ul>
-                <li><a href="#">Beranda</a></li>
-                <li><a href="#">Genre</a></li>
-                <li><a href="#">Aktor</a></li>
-            </ul>
-        </nav>
+        <h1>Drama China</h1>
+        <p>Jelajahi keindahan kisah dari daratan Tiongkok</p>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Jelajahi Dunia <br><span>Kisah Klasik & Modern</span></h1>
-            <p>Daftar drama pilihan terbaik untuk menemani waktu luangmu.</p>
-            <a href="#drama-list" class="btn">Jelajah</a>
+    <nav>
+        <button onclick="filterGenre('all')">Semua</button>
+        <button onclick="filterGenre('xianxia')">Xianxia</button>
+        <button onclick="filterGenre('wuxia')">Wuxia</button>
+        <button onclick="filterGenre('republican')">Era Republik</button>
+        <button onclick="filterGenre('modern')">Romansa Modern</button>
+        <button onclick="filterGenre('school')">Sekolah</button>
+        <button onclick="filterGenre('esport')">E-Sport</button>
+        <button onclick="filterGenre('history')">Sejarah</button>
+    </nav>
+
+    <main id="drama-container">
+        </main>
+
+    <section class="actors-section">
+        <h2>Aktor Populer</h2>
+        <div class="actor-list">
+            <div class="actor-card">Xiao Zhan</div>
+            <div class="actor-card">Dilraba Dilmurat</div>
+            <div class="actor-card">Zhao Lusi</div>
+            <div class="actor-card">Yang Yang</div>
+            <div class="actor-card">Cheng Yi</div>
+            <div class="actor-card">Ju Jingyi</div>
+            <div class="actor-card">Liu Yuning</div>
+            <div class="actor-card">Zhang Linghe</div>
+            <div class="actor-card">Yu Shuxin</div>
         </div>
     </section>
-
-    <main id="drama-list">
-        <h2 class="section-title">Sedang Populer</h2>
-        
-        <div class="slider-container">
-            <div class="slider-wrapper">
-                
-                <div class="card">
-                    <img src="https://1.vikiplatform.com/c/41446c/8e8ca43d66.jpg?x=b" alt="Love Beyond the Grave">
-                    <div class="card-info">
-                        <h3>Love Beyond the Grave</h3>
-                        <span>Xianxia, Tragedy</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="https://upload.wikimedia.org/wikipedia/id/3/3c/Hidden_Love_2023_TV_series.jpg" alt="Hidden Love">
-                    <div class="card-info">
-                        <h3>Hidden Love</h3>
-                        <span>Modern, Romance</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?q=80&w=300&h=450&fit=crop" alt="The Untamed">
-                    <div class="card-info">
-                        <h3>The Untamed</h3>
-                        <span>Xianxia, Fantasy</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="https://via.placeholder.com/300x450/1a1a1a/d4af37?text=Who+Rules+The+World" alt="Who Rules The World">
-                    <div class="card-info">
-                        <h3>Who Rules The World</h3>
-                        <span>Wuxia, Romance</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="https://via.placeholder.com/300x450/1a1a1a/d4af37?text=Eternal+Love" alt="Eternal Love">
-                    <div class="card-info">
-                        <h3>Eternal Love</h3>
-                        <span>Xianxia, Fantasy</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="https://via.placeholder.com/300x450/1a1a1a/d4af37?text=Lighter+and+Princess" alt="Lighter and Princess">
-                    <div class="card-info">
-                        <h3>Lighter and Princess</h3>
-                        <span>Modern, Youth</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="https://via.placeholder.com/300x450/1a1a1a/d4af37?text=Till+The+End+of+The+Moon" alt="Till The End of The Moon">
-                    <div class="card-info">
-                        <h3>Till The End of The Moon</h3>
-                        <span>Xianxia, Fantasy</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="https://via.placeholder.com/300x450/1a1a1a/d4af37?text=Story+of+Kunning+Palace" alt="Story of Kunning Palace">
-                    <div class="card-info">
-                        <h3>Story of Kunning Palace</h3>
-                        <span>Historical, Palace</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="https://via.placeholder.com/300x450/1a1a1a/d4af37?text=Amidst+a+Snowstorm+of+Love" alt="Amidst a Snowstorm of Love">
-                    <div class="card-info">
-                        <h3>Amidst a Snowstorm of Love</h3>
-                        <span>Romance, Sport</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="https://via.placeholder.com/300x450/1a1a1a/d4af37?text=Wonderland+of+Love" alt="Wonderland of Love">
-                    <div class="card-info">
-                        <h3>Wonderland of Love</h3>
-                        <span>Historical, Action</span>
-                    </div>
-                </div>
-
-            </div>
-            <p class="scroll-hint">← Geser untuk melihat lebih banyak →</p>
-        </div>
-    </main>
-
-    <div id="dramaModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <div class="modal-body">
-                <img id="modalImg" src="" alt="">
-                <div class="modal-text">
-                    <h2 id="modalTitle">Judul Drama</h2>
-                    <p id="modalDesc">Sinopsis akan muncul di sini...</p>
-                    <button class="btn">Trailer</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy; 2026 Kumpulan Drama China.</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>
