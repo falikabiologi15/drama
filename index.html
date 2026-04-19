@@ -3,54 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Portal Drama China Terbaru</title>
+    <title>CineMandarin | Rekomendasi C-Drama</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header>
+        <div class="logo">
+            <h1>影院 <span>CineMandarin</span></h1>
+        </div>
         <nav>
-            <div class="logo">华语 DRAMA</div>
             <ul>
-                <li><a href="#">Beranda</a></li>
-                <li><a href="#drama-list">Populer</a></li>
-                <li><a href="#">Genre</a></li>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Historical</a></li>
+                <li><a href="#">Modern</a></li>
+                <li><a href="#">Wuxia</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Trending di <br><span>Tahun 2026</span></h1>
-            <p>Telusuri kisah Mandarin terbaik musim ini.</p>
-            <a href="#drama-list" class="btn">Lihat 10 Teratas</a>
+            <h2>The Art of Storytelling</h2>
+            <p>Jelajahi keindahan visual dan emosi mendalam melalui kurasi Drama China terbaik.</p>
         </div>
     </section>
 
-    <main id="drama-list">
-        <h2 class="section-title">Drama China Populer 2026</h2>
-        <div class="grid-container" id="main-grid">
+    <main>
+        <div class="section-title">
+            <h2>Rekomendasi Terpopuler</h2>
+            <div class="line"></div>
+        </div>
+
+        <div class="drama-grid" id="dramaGrid">
             </div>
     </main>
 
-    <div id="dramaModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <div class="modal-body">
-                <img id="modalImg" src="" alt="Poster">
-                <div class="modal-text">
-                    <h2 id="modalTitle"></h2>
-                    <p id="modalGenre" class="genre-tag"></p>
-                    <p id="modalDesc"></p>
-                    <button class="btn">Trailer</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <footer>
-        <p>&copy; 2026 C-Drama. Keindahan dalam Setiap Cerita.</p>
+        <p>&copy; 2026 CineMandarin. Dibuat dengan estetika Timur.</p>
     </footer>
 
     <script src="script.js"></script>
