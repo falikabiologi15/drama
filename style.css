@@ -1,1 +1,151 @@
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0f0f0f; /* Hitam elegan */
+    color: #f1f1f1;
+    line-height: 1.6;
+}
+
+/* Nuansa China: Font & Warna */
+.logo {
+    font-family: 'Ma Shan+Zheng', cursive; /* Font gaya kuas tinta */
+    font-size: 2rem;
+    color: #d4af37; /* Warna Emas */
+}
+
+/* Header */
+header {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px 10%;
+    border-bottom: 2px solid #8b0000; /* Garis Merah Tua */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #d4af37;
+}
+
+/* Hero Section dengan Background Nuansa China */
+.hero {
+    height: 80vh;
+    /* Ganti URL di bawah dengan gambar pemandangan pegunungan China atau poster drama */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1508804185872-d7badad00f7d?q=80&w=2070') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+}
+
+.hero-content span {
+    color: #ff4d4d; /* Aksen merah terang */
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 30px;
+    background: #8b0000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    border: 1px solid #d4af37;
+}
+
+.btn:hover {
+    background: #d4af37;
+    color: #000;
+}
+
+/* Grid Drama */
+main {
+    padding: 50px 10%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #333;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: #d4af37;
+}
+
+.card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 15px;
+}
+
+.card-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.card-info span {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #000;
+    border-top: 1px solid #8b0000;
+}
