@@ -1,4 +1,4 @@
-/* Reset Dasar */
+/* --- RESET & DASAR --- */
 * {
     margin: 0;
     padding: 0;
@@ -7,23 +7,17 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #0f0f0f; /* Hitam elegan */
-    color: #f1f1f1;
+    background-color: #0b0b0b; /* Hitam pekat */
+    color: #e0e0e0;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
-/* Nuansa China: Font & Warna */
-.logo {
-    font-family: 'Ma Shan+Zheng', cursive; /* Font gaya kuas tinta */
-    font-size: 2rem;
-    color: #d4af37; /* Warna Emas */
-}
-
-/* Header */
+/* --- NAVIGASI --- */
 header {
-    background: rgba(0, 0, 0, 0.9);
-    padding: 20px 10%;
-    border-bottom: 2px solid #8b0000; /* Garis Merah Tua */
+    background: rgba(0, 0, 0, 0.95);
+    padding: 15px 8%;
+    border-bottom: 3px solid #8b0000; /* Garis merah darah */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -33,6 +27,13 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.logo {
+    font-family: 'Ma Shan Zheng', cursive; /* Font kaligrafi kuas */
+    font-size: 2.2rem;
+    color: #d4af37; /* Emas Imperial */
+    text-shadow: 2px 2px 4px rgba(139, 0, 0, 0.5);
 }
 
 nav ul {
@@ -47,6 +48,7 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #fff;
+    font-weight: 500;
     transition: 0.3s;
 }
 
@@ -54,197 +56,4 @@ nav ul li a:hover {
     color: #d4af37;
 }
 
-/* Hero Section dengan Background Nuansa China */
-.hero {
-    height: 80vh;
-    /* Ganti URL di bawah dengan gambar pemandangan pegunungan China atau poster drama */
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                url('https://png.pngtree.com/background/20210711/original/pngtree-chinese-style-ink-landscape-painting-picture-image_1086671.jpg') no-repeat center center/cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.hero-content h1 {
-    font-size: 3.5rem;
-}
-
-.hero-content span {
-    color: #ff4d4d; /* Aksen merah terang */
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 30px;
-    background: #8b0000;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: 0.3s;
-    border: 1px solid #d4af37;
-}
-
-.btn:hover {
-    background: #d4af37;
-    color: #000;
-}
-
-/* Grid Drama */
-main {
-    padding: 50px 10%;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2rem;
-    border-bottom: 1px solid #333;
-    padding-bottom: 10px;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-}
-
-.card {
-    background: #1a1a1a;
-    border-radius: 10px;
-    overflow: hidden;
-    border: 1px solid #333;
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    border-color: #d4af37;
-}
-
-.card img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-}
-
-.card-info {
-    padding: 15px;
-}
-
-.card-info h3 {
-    font-size: 1.1rem;
-    margin-bottom: 5px;
-}
-
-.card-info span {
-    font-size: 0.9rem;
-    color: #aaa;
-}
-
-footer {
-    text-align: center;
-    padding: 40px;
-    background: #000;
-    border-top: 1px solid #8b0000;
-}
-
-/* Styling Modal */
-.modal {
-    display: none; 
-    position: fixed;
-    z-index: 2000;
-    left: 0; top: 0;
-    width: 100%; height: 100%;
-    background-color: rgba(0,0,0,0.9);
-}
-
-.modal-content {
-    background-color: #1a1a1a;
-    margin: 5% auto;
-    padding: 20px;
-    border: 2px solid #d4af37; /* Border Emas */
-    width: 70%;
-    max-width: 800px;
-    border-radius: 15px;
-    position: relative;
-}
-
-.close-btn {
-    position: absolute;
-    right: 20px;
-    top: 10px;
-    color: #d4af37;
-    font-size: 30px;
-    cursor: pointer;
-}
-
-.modal-body {
-    display: flex;
-    gap: 20px;
-    padding: 20px;
-}
-
-.modal-body img {
-    width: 250px;
-    border-radius: 10px;
-}
-
-.modal-text h2 {
-    color: #d4af37;
-    margin-bottom: 15px;
-}
-
-/* Responsive modal */
-@media (max-width: 600px) {
-    .modal-body { flex-direction: column; align-items: center; }
-}
-
-/* Slider Container */
-.slider-container {
-    position: relative;
-    padding: 20px 0;
-}
-
-.slider-wrapper {
-    display: flex;
-    overflow-x: auto; /* Mengaktifkan geser horizontal */
-    gap: 20px;
-    padding-bottom: 20px;
-    scroll-behavior: smooth;
-    scrollbar-width: thin; /* Untuk Firefox */
-    scrollbar-color: #d4af37 #1a1a1a;
-}
-
-/* Custom Scrollbar untuk Chrome/Safari */
-.slider-wrapper::-webkit-scrollbar {
-    height: 8px;
-}
-
-.slider-wrapper::-webkit-scrollbar-track {
-    background: #1a1a1a;
-}
-
-.slider-wrapper::-webkit-scrollbar-thumb {
-    background-color: #d4af37;
-    border-radius: 10px;
-}
-
-/* Penyesuaian Ukuran Card agar tetap rapi saat digeser */
-.card {
-    min-width: 250px; /* Supaya card tidak mengecil */
-    background: #1a1a1a;
-    border-radius: 10px;
-    border: 1px solid #333;
-    transition: 0.3s;
-    flex-shrink: 0; /* Mencegah card menciut */
-}
-
-.scroll-hint {
-    text-align: center;
-    font-size: 0.8rem;
-    color: #d4af37;
-    margin-top: 10px;
-    opacity: 0.7;
-}
+/* ---
