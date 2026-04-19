@@ -59,7 +59,7 @@ nav ul li a:hover {
     height: 80vh;
     /* Ganti URL di bawah dengan gambar pemandangan pegunungan China atau poster drama */
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                url('https://images.unsplash.com/photo-1508804185872-d7badad00f7d?q=80&w=2070') no-repeat center center/cover;
+                url('https://png.pngtree.com/background/20210711/original/pngtree-chinese-style-ink-landscape-painting-picture-image_1086671.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
